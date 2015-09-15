@@ -1,7 +1,7 @@
 Facebook-ish
 ============
 
-![alt text](public/images/screenshot.jpg "screenshot")
+![alt text](app/assets/images/screenshot.jpg "screenshot")
 
 Project Description
 -----
