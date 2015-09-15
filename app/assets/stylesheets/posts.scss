@@ -1,0 +1,72 @@
+// Place all the styles related to the posts controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+body {
+  text-align:left;
+	background-color:#e9eaee;
+  font-family: "lucida grande", tahoma, verdana, arial, sans-serif;
+}
+#topbar {
+  background-color:#3f5c98;
+  height: 40px;
+}
+#content {
+  margin:0px auto;
+  width: 1000px;
+  text-align: center;
+}
+#leftcolumn {
+  width: 180px;
+  float: left;
+}
+#centralcolumn {
+  width: 500px;
+  float: left;
+  text-align:left;
+  padding: 10px;
+}
+#rightcolumn {
+  width: 300px;
+  float: left;
+}
+#statusupdatebox {
+  background-color: #ffffff;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #000000;
+  border-right: 1px solid #000000;
+}
+#postbox {
+  background-color: #ffffff;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #000000;
+  border-right: 1px solid #000000;
+}
+#title {
+  text-align:left;
+  width: 400px;
+  font-size: 40px;
+  border-bottom: 3px solid #000000;
+  padding: 10px;
+}
+#add_task {
+  text-align:center;
+  width: 400px;
+  font-size: 26px;
+  border-top: 3px solid #000000;
+  padding: 10px;
+}
+#main {
+  text-align:left;
+  width: 400px;
+  font-size: 20px;
+  padding: 10px;
+}
+#message {
+  text-align:center;
+  width: 400px;
+  font-size: 30px;
+  color: #ff0000;
+  padding: 10px;
+}

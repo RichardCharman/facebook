@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Facebook</title>
+  <%= favicon_link_tag 'icon.png' %>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <div id="topbar"></div>
+    <div id="content">
+      <div id="leftcolumn">
+        <%=image_tag("facebookleft.jpg", alt: "Example Left Column")%>
+      </div>
+      <div id="centralcolumn">
+        <%= yield %>
+      </div>
+      <div id="rightcolumn">
+        <%=image_tag("facebookright.jpg", alt: "Example Right Column")%>
+      </div>
+    </div>
+</body>
+</html>

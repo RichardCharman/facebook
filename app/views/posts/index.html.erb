@@ -1,0 +1,22 @@
+<div id="statusupdatebox">
+  <%= form_for @post do |f| %>
+    <%= f.label :status %>
+    <%= f.text_field(:status, size: 50) %>
+    <%= f.submit %>
+  <% end %>
+</div>
+<div>
+  <%= notice %>
+</div>
+<div>
+  <% if @posts.any? %>
+    <% @posts.each do |post| %>
+      <div id="postbox">
+        <%= post.status %><br />
+        <%= link_to "Delete", post_path(post), method: :delete %>
+        </div>
+    <% end %>
+  <% else %>
+    No posts yet
+  <% end %>
+</div>
