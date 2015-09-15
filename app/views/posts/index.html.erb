@@ -25,12 +25,14 @@
           <%= 'like'.pluralize(post.likes.count) %>
         </div>
         <% if post.comments.any? %>
-        <div id="commentsbox">
+
           <% post.comments.each do |comment| %>
-            <ul>
+            <div id="commentsbox">
+            <li>
               <%= comment.comment %>
-            </ul>
-        </div>
+                </li>
+               </div>
+
           <% end %>
         <% else %>
           <div id="nocommentsbox">
