@@ -13,6 +13,20 @@ a:link {
   background-color:#3f5c98;
   height: 40px;
 }
+#tbleft {
+  margin: 4px;
+}
+#tbmiddle {
+  position: absolute;
+  top: 13px;
+  left: 230px;
+  width: 400px;
+  background-color: white;
+  height: 19px;
+  border-bottom: 1px solid #bbbdc4;
+  border-right: 1px solid #bbbdc4;
+  padding: 5px;
+}
 #signin {
   float: right;
   background-color: white;
@@ -60,10 +74,20 @@ a:link {
   border-top: 1px solid #bbbdc4;
   font-size: 80%;
 }
+#peoplelike {
+  font-size: 80%;
+  padding: 5px;
+  padding-left: 10px;
+  border-top: 1px solid #bbbdc4;
+  background-color: #f6f7f9;
+}
 #commentsbox {
   padding-bottom: 10px;
   border-top: 1px solid #bbbdc4;
   background-color: #f6f7f9;
+}
+#nocommentsbox {
+  padding: 10px;
 }
 #title {
   text-align:left;

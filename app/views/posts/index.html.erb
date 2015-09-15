@@ -4,7 +4,6 @@
     <%= f.text_field(:status, size: 50) %>
     <%= f.submit %>
   <% end %>
-  <%= notice %>
 </div>
 <div>
   <% if @posts.any? %>
@@ -14,10 +13,16 @@
           <%= post.status %>
         </div>
         <div id="functionsbar">
+          <%=image_tag("likethumb.jpg", alt: "Like icon", width: "20")%>
+          <%= link_to "like", post_likes_path(post), method: :post %>
           <%=image_tag("commenticon.jpg", alt: "Comment icon", width: "20")%>
           <%= link_to "Comment", new_post_comment_path(post) %>
           <%=image_tag("delete.jpg", alt: "Delete icon", width: "10")%>
           <%= link_to "Delete", post_path(post), method: :delete %>
+        </div>
+        <div id="peoplelike">
+          <span class="likes_count"> <%= post.likes.count %> </span>
+          <%= 'like'.pluralize(post.likes.count) %>
         </div>
         <% if post.comments.any? %>
         <div id="commentsbox">
@@ -28,7 +33,9 @@
         </div>
           <% end %>
         <% else %>
-          No comments.
+          <div id="nocommentsbox">
+            No comments.
+          </div>
         <% end %>
       </div>
     <% end %>
