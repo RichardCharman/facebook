@@ -1,8 +1,9 @@
 <div id="statusupdatebox">
-  <%= form_for @post do |f| %>
+  <%= form_for @post, html: {multipart: true} do |f| %>
     <%= f.label :status %>
     <%= f.text_field(:status, size: 50) %>
     <%= f.submit %>
+    <%= f.file_field :image %>
   <% end %>
 </div>
 <div>
@@ -10,7 +11,8 @@
     <% @posts.each do |post| %>
       <div id="postbox">
         <div id="post">
-          <%= post.status %>
+          <%= image_tag post.image.url(:large) %>
+          <div><%= post.status %></div>
         </div>
         <div id="functionsbar">
           <%=image_tag("likethumb.jpg", alt: "Like icon", width: "20")%>
