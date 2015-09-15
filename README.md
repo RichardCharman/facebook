@@ -17,10 +17,17 @@ The top bar displays any flash messages and sign up/in/out links.
 To Do
 ---
 Make all posts and comments user specific
+
 Require a username at sign up and display on screen & in posts/comments
+
 Add timestamps
+
 Limit amount of posts displayed on index page
+
 Add like for comments
+
 Change commenting so it stays on same page
+
 Limit like to once per post per user
+
 Add user profile image and display on posts/comments
