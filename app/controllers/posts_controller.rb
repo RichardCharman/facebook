@@ -5,12 +5,17 @@ class PostsController < ApplicationController
   end
 
   def new
-    @post - Post.new
+    @post = Post.new
   end
 
   def create
-    Post.create(post_params)
-    redirect_to '/posts'
+    @post = Post.new(post_params)
+    if @post.save
+      redirect_to posts_path
+    else
+      flash[:notice] = 'Status must contain at least one character'
+      redirect_to posts_path
+    end
   end
 
   def destroy

@@ -28,7 +28,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 # Use Unicorn as the app server
 # gem 'unicorn'
-
+gem 'devise'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
@@ -46,4 +46,6 @@ end
 group :test do
   gem 'rspec-rails'
   gem 'capybara'
+  gem 'shoulda'
+  gem 'rspec-collection_matchers'
 end

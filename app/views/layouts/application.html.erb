@@ -8,7 +8,16 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <div id="topbar"></div>
+  <div id="topbar">
+    <div id="signin">
+      <% if user_signed_in? %>
+        <%= link_to "Sign out", destroy_user_session_path, method: :delete %>
+      <% else %>
+        <%= link_to "Sign in", new_user_session_path %> -
+         <%= link_to "Sign up", new_user_registration_path %>
+      <% end %>
+    </div>
+  </div>
     <div id="content">
       <div id="leftcolumn">
         <%=image_tag("facebookleft.jpg", alt: "Example Left Column")%>

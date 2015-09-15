@@ -6,9 +6,18 @@ body {
 	background-color:#e9eaee;
   font-family: "lucida grande", tahoma, verdana, arial, sans-serif;
 }
+a:link {
+  text-decoration: none;
+}
 #topbar {
   background-color:#3f5c98;
   height: 40px;
+}
+#signin {
+  float: right;
+  background-color: white;
+  margin: 5px;
+  padding: 5px;
 }
 #content {
   margin:0px auto;
@@ -33,15 +42,28 @@ body {
   background-color: #ffffff;
   padding: 10px;
   margin-bottom: 10px;
-  border-bottom: 1px solid #000000;
-  border-right: 1px solid #000000;
+  border-bottom: 1px solid #bbbdc4;
+  border-right: 1px solid #bbbdc4;
 }
 #postbox {
   background-color: #ffffff;
   padding: 10px;
   margin-bottom: 10px;
-  border-bottom: 1px solid #000000;
-  border-right: 1px solid #000000;
+  border-bottom: 1px solid #bbbdc4;
+  border-right: 1px solid #bbbdc4;
+}
+#post {
+  margin-bottom: 10px;
+}
+#functionsbar {
+  padding: 10px;
+  border-top: 1px solid #bbbdc4;
+  font-size: 80%;
+}
+#commentsbox {
+  padding-bottom: 10px;
+  border-top: 1px solid #bbbdc4;
+  background-color: #f6f7f9;
 }
 #title {
   text-align:left;

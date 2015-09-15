@@ -4,17 +4,33 @@
     <%= f.text_field(:status, size: 50) %>
     <%= f.submit %>
   <% end %>
-</div>
-<div>
   <%= notice %>
 </div>
 <div>
   <% if @posts.any? %>
     <% @posts.each do |post| %>
       <div id="postbox">
-        <%= post.status %><br />
-        <%= link_to "Delete", post_path(post), method: :delete %>
+        <div id="post">
+          <%= post.status %>
         </div>
+        <div id="functionsbar">
+          <%=image_tag("commenticon.jpg", alt: "Comment icon", width: "20")%>
+          <%= link_to "Comment", new_post_comment_path(post) %>
+          <%=image_tag("delete.jpg", alt: "Delete icon", width: "10")%>
+          <%= link_to "Delete", post_path(post), method: :delete %>
+        </div>
+        <% if post.comments.any? %>
+        <div id="commentsbox">
+          <% post.comments.each do |comment| %>
+            <ul>
+              <%= comment.comment %>
+            </ul>
+        </div>
+          <% end %>
+        <% else %>
+          No comments.
+        <% end %>
+      </div>
     <% end %>
   <% else %>
     No posts yet
